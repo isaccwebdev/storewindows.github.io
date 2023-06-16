@@ -12,3 +12,12 @@ const fadeInObserver = new IntersectionObserver(entries => {
 elements.forEach(element => {
     fadeInObserver.observe(element);
 });
+window.addEventListener("load", function() {
+    var loadingScreen = document.getElementById("loading-screen");
+    var content = document.getElementById("content");
+    
+    setTimeout(function() {
+        loadingScreen.style.display = "none";
+        content.classList.remove("hide");
+    }, 2000);
+});
